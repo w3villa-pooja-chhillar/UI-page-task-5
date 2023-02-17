@@ -1,3 +1,17 @@
+/* Common classes */
+.ml{
+    margin-left: 10px;
+}
+.mr{
+    margin-right: 10px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Normal classes */
 .container{
     width: 80vw;
     margin: auto;
@@ -29,13 +43,19 @@ header .row-align-items {
     display: flex;
 	justify-content: space-between;
 }
+
+header .row-align-items i{
+    display: none;
+}
+
 header .container{
     padding: 25px;
+    /* height: 100vh; */
 }
 header .hero{
-height:300px;
+/* height:300px; */
 text-align: center;
-padding-top: 180px;
+padding-top: 30vh;
 }
 header .hero button{
     background-color: #FF1493;
@@ -43,6 +63,8 @@ header .hero button{
     color: aliceblue;
     border: unset;
     padding: 10px 30px;
+      margin-top: 20px;
+    
 }
 .top-content{
     text-align: center;
@@ -55,15 +77,17 @@ header .hero button{
 .second-child{
    display: flex;
    padding-bottom: 50px;
+   justify-content: space-between;
 }
 
 
 .free-trail{
     height: 110px;
-   padding-top: 70px;
+   padding-top: 20px;
     text-align: center;
     background-color: #FF1493;
     color: aliceblue;
+    
 }
 .free-trail button{
     border: unset;
@@ -72,17 +96,20 @@ header .hero button{
     border-radius: 20px;
 }
 .footer-first-child{
-    height: 250px;
     display: flex;
-    padding-left: 210px;
-    padding-top: 90px;
+    justify-content: space-around;
+    padding-top:30px;
 
 }
-.footer-second-child h1{
-    text-align: left;
+.footer-second-child{
+    display: flex;
+    justify-content: space-around;
+}
+.footer-second-child p{
+    padding-top: 10px;
 }
 .img{
-    height: 200px;
+    height: 100%;
     width: 100%;
 }
 .img img{
@@ -91,23 +118,27 @@ header .hero button{
     object-fit: cover;
 }
 .first-image{
-    padding-left: 50px;
+    width: 100%;
+    height: 100%;
+   
 }
 .second-image{
-    padding-left: 30px;
+    width: 100%;
+     height: 100%;
 }
 .third-image{
-    padding-left: 40px;
+    width: 100%;
+     height: 100%;
 }
 .achoo{
     list-style: none;
 }
 .support{
-    padding-left: 200px;
+    /* padding-left: 200px; */
     list-style: none;
 }
 .contact-us{
-    padding-left: 200px;
+    /* padding-left: 200px; */
     list-style: none;
 }
 .achoo li a{
@@ -137,12 +168,42 @@ header{
     background-size: cover;
     height: 100vh;
     position: relative;
+    
 }
 .color{
     background-color: aquamarine;
 }
-.hero h1{
+.hero p{
     font-size: 40px;
      color: black;
      font-weight: bold;
+}
+@media screen and (max-width:1134px){
+    .navigation{
+        display: none;
+    }
+
+    header .row-align-items i{
+        display: block;
+    }
+}
+@media screen and (max-width:860px){
+    .footer .footer-first-child{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-second-child{
+        flex-direction: column;
+        padding-left: 40px;
+    }
+}
+@media screen and (max-width:700px){
+    .container .second-child{
+        flex-direction: column;
+    }
+}
+.free-trail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
